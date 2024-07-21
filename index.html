@@ -3,105 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ammal's Resume</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Portfolio - Ammal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            padding: 20px;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecf0f3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
         }
-        .resume-section {
+        header, footer {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+            background: #ecf0f3;
+            box-shadow: 7px 7px 15px #babecc, -7px -7px 15px #fff;
+            border-radius: 20px;
+        }
+        header h1, header p, footer p {
+            margin: 10px 0;
+        }
+        section {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 7px 7px 15px #babecc, -7px -7px 15px #fff;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            color: #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #e2e2e2;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .education-item, .project {
             margin-bottom: 20px;
         }
-        .resume-section h2 {
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
+        .education-item h3, .project h3 {
+            margin: 0;
+            color: #333;
         }
-        .contact-info {
-            font-size: 1.1em;
+        .education-item p, .project p {
+            margin: 5px 0;
+        }
+        a {
+            color: #4b6cb7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #182848;
+            text-decoration: underline;
+        }
+
+        /* Mobile First Styles */
+        @media (min-width: 600px) {
+            header h1 {
+                font-size: 3em;
+            }
+            header p {
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Md Ammal</h1>
+        <p>Fast-paced, creative web developer with extensive knowledge of HTML, CSS, JavaScript, PHP, and JQuery languages. Strong proficiency in visual design and user interface design.</p>
+    </header>
 
-<div class="container">
-    <div class="text-center">
-        <h1>Ammal</h1>
-        <p class="contact-info">9910875127 | mdammal7862+resume@gmail.com | New Delhi, New Delhi</p>
-    </div>
-
-    <div class="resume-section">
-        <h2>Summary</h2>
-        <p>Fast-paced, creative web developer with extensive knowledge of HTML, CSS, JavaScript, PHP and JQuery languages. Strong proficiency in visual design and user interface design.</p>
-    </div>
-
-    <div class="resume-section">
+    <section id="skills">
         <h2>Skills</h2>
-        <ul class="list-unstyled">
-            <li>Communication Skills</li>
-            <li>CSS</li>
-            <li>SQL</li>
-            <li>JavaScript</li>
-            <li>JQuery</li>
+        <ul>
             <li>HTML5</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+            <li>JQuery</li>
             <li>PHP</li>
             <li>C/C++</li>
             <li>Java</li>
             <li>AJAX</li>
+            <li>Good Communication</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="resume-section">
+    <section id="experience">
+        <h2>Experience</h2>
+        <p>Fresher</p>
+    </section>
+
+    <section id="education">
         <h2>Education</h2>
-        <h5>Indra Gandhi National Open University | New Delhi, New Delhi</h5>
-        <p>Bachelor of Computer Applications | 12/2024</p>
-        <p>The degree focuses on the design, development, and deployment of software systems with a special focus on the design and analysis of software security. Languages taught here are C, C++, Java, SQL, HTML-CSS-JS, PHP and some attributes of jQuery and AJAX.</p>
-        <h5>Sarvodaya Bal Vidyalaya | West Delhi, New Delhi</h5>
-        <p>12th | 07/2020</p>
-        <p>The field of Study was Commerce. Subjects: Accounts, Business, Economics, Mathematics, English and Physical Education.</p>
-        <h5>Sarvodaya Bal Vidyalaya | West Delhi, New Delhi</h5>
-        <p>10th | 06/2018</p>
-        <p>Subjects: Hindi, English, Maths, Science, Social Science and Punjabi.</p>
-    </div>
+        <div class="education-item">
+            <h3>Bachelor of Computer Applications</h3>
+            <p>Indra Gandhi National Open University | New Delhi, New Delhi</p>
+            <p>12/2024</p>
+            <p>The degree focuses on the design, development, and deployment of software systems with a special focus on the design and analysis of software security. Languages taught include C, C++, Java, SQL, HTML-CSS-JS, PHP, and some attributes of jQuery and AJAX.</p>
+        </div>
+        <div class="education-item">
+            <h3>12th</h3>
+            <p>Sarvodaya Bal Vidyalaya | West Delhi, New Delhi</p>
+            <p>07/2020</p>
+            <p>The field of Study was Commerce. Subjects: Accounts, Business, Economics, Mathematics, English, and Physical Education.</p>
+        </div>
+        <div class="education-item">
+            <h3>10th</h3>
+            <p>Sarvodaya Bal Vidyalaya | West Delhi, New Delhi</p>
+            <p>06/2018</p>
+            <p>Subjects: Hindi, English, Maths, Science, Social Science, and Punjabi.</p>
+        </div>
+    </section>
 
-    <div class="resume-section">
+    <section id="projects">
         <h2>Projects</h2>
-        <h5>Login Page</h5>
-        <p>Responsive webpage | 03/2024 - 05/2024</p>
-        <p>We designed this page to understand the workings of the backend process around data (using PHP) sent by the browser of the form (HTML Page) and fetching and storing the data into the local database (on Apache Server).</p>
-        <h5>Fancy LoginPage</h5>
-        <p>Using Bootstrap | 03/2024 - 04/2024</p>
-        <p>Understanding the concept of HTML's and Bootstrap's working mechanisms together.</p>
-        <h5>Microsoft Word's Ribbon</h5>
-        <p>Exploration of JS jargons | 05/2023 - 07/2023</p>
-        <p>An attempt to replicate Microsoft Word with all functionalities on the web page. And exploring the JS (JavaScript).</p>
-        <h5>Mini Project</h5>
-        <p>Understanding the Hover property | 06/2023 - 06/2023</p>
-        <p>To understand the concept of the Hover property of CSS.</p>
-    </div>
+        <div class="project">
+            <h3>Login Page</h3>
+            <p>Responsive webpage | 03/2024 - 05/2024</p>
+            <p>We designed this page to understand the workings of the backend process around data (using PHP) sent by the browser of the form (HTML Page) and fetching and storing the data into the local database (on Apache Server).</p>
+        </div>
+        <div class="project">
+            <h3>Fancy LoginPage</h3>
+            <p>Using Bootstrap | 03/2024 - 04/2024</p>
+            <p>Understanding the concept of HTML's and Bootstrap's working mechanisms together.</p>
+        </div>
+        <div class="project">
+            <h3>Microsoft Word's Ribbon</h3>
+            <p>Exploration of JS jargons | 05/2023 - 07/2023</p>
+            <p>An attempt to replicate Microsoft Word with all functionalities on the web page. And exploring the JS (JavaScript).</p>
+        </div>
+        <div class="project">
+            <h3>Mini Project</h3>
+            <p>Understanding the Hover property | 06/2023 - 06/2023</p>
+            <p>To understand the concept of the Hover property of CSS.</p>
+        </div>
+    </section>
 
-    <div class="resume-section">
-        <h2>Languages</h2>
-        <ul class="list-unstyled">
-            <li>Hindi</li>
-            <li>English</li>
-        </ul>
-    </div>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:mdammal7862+resume@gmail.com">mdammal7862+resume@gmail.com</a></p>
+        <p>Phone: 9910875127, 8010202587</p>
+        <p>WhatsApp: <a href="https://wa.me/+919667124661">wa.me/+919667124661</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/md-ammal-32433720a">www.linkedin.com/in/md-ammal-32433720a</a></p>
+        <p>GitHub: <a href="https://github.com/Md-ammal">https://github.com/Md-ammal</a></p>
+        <p>Address: B-Block Sudarshan Park, Moti Nagar, West Delhi, New Delhi-110015.</p>
+    </section>
 
-    <div class="resume-section">
-        <h2>Certificates</h2>
-        <ul class="list-unstyled">
-            <li>PHP</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>C Language</li>
-            <li>Java</li>
-        </ul>
-    </div>
-</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <footer>
+        <p>&copy; 2024 Ammal. All rights reserved.</p>
+    </footer>
 </body>
 </html>
