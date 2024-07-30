@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Md Ammal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecf0f3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+            overflow-x: hidden;
+        }
+        header, footer {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+            background: #ecf0f3;
+            box-shadow: 7px 7px 15px #babecc, -7px -7px 15px #fff;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        header h1, header p, footer p {
+            margin: 10px 0;
+        }
+        header::after, footer::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+            transform: rotate(45deg);
+            transition: opacity 0.5s;
+        }
+        header:hover::after, footer:hover::after {
+            opacity: 0;
+        }
+        section {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 7px 7px 15px #babecc, -7px -7px 15px #fff;
+            /*backdrop-filter: blur(10px);*/
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        section:hover {
+            transform: scale(1.05);
+        }
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            color: #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #e2e2e2;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background 0.3s, transform 0.3s;
+        }
+        ul li:hover {
+            background: #d1d1d1;
+            transform: translateX(10px);
+        }
+        .education-item, .project {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .education-item h3, .project h3 {
+            margin: 0;
+            color: #333;
+        }
+        .education-item p, .project p {
+            margin: 5px 0;
+        }
+        .education-item::before, .project::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: -10px;
+            width: 10px;
+            height: 10px;
+            background: #4b6cb7;
+            border-radius: 50%;
+            transition: width 0.3s, height 0.3s, background 0.3s;
+        }
+        .education-item:hover::before, .project:hover::before {
+            width: 20px;
+            height: 20px;
+            background: #182848;
+        }
+        a {
+            color: #4b6cb7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #182848;
+            text-decoration: underline;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        section {
+            animation: fadeIn 1s ease-in-out;
+        }
+        /* Mobile First Styles */
+        @media (min-width: 600px) {
+            header h1 {
+                font-size: 3em;
+            }
+            header p {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Md Ammal</h1>
+        <p>Fast-paced, creative web developer with extensive knowledge of HTML, CSS, JavaScript, PHP, and JQuery languages. Strong proficiency in visual design and user interface design.</p>
+    </header>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>CSS</li>
+            <li>SQL</li>
+            <li>JavaScript</li>
+            <li>JQuery</li>
+            <li>HTML5</li>
+            <li>PHP</li>
+            <li>C/C++</li>
+            <li>Java</li>
+            <li>AJAX</li>
+            <li>Good Communication</li>
+        </ul>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <p>Fresher</p>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>Bachelor of Computer Applications</h3>
+            <p>Indra Gandhi National Open University | New Delhi, New Delhi</p>
+            <p>12/2024</p>
+            <p>The degree focuses on the design, development, and deployment of software systems with a special focus on the design and analysis of software security. Languages taught include C, C++, Java, SQL, HTML-CSS-JS, PHP, and some attributes of jQuery and AJAX.</p>
+        </div>
+        <div class="education-item">
+            <h3>12th</h3>
+            <p>Sarvodaya Bal Vidyalaya | West Delhi, New Delhi</p>
+            <p>07/2020</p>
+            <p>The field of Study was Commerce. Subjects: Accounts, Business, Economics, Mathematics, English, and Physical Education.</p>
+        </div>
+        <div class="education-item">
+            <h3>10th</h3>
+            <p>Sarvodaya Bal Vidyalaya | West Delhi, New Delhi</p>
+            <p>06/2018</p>
+            <p>Subjects: Hindi, English, Maths, Science, Social Science, and Punjabi.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Login Page</h3>
+            <p>Responsive webpage | 03/2024 - 05/2024</p>
+            <p>We designed this page to understand the workings of the backend process around data (using PHP) sent by the browser of the form (HTML Page) and fetching and storing the data into the local database (on Apache Server).</p>
+        </div>
+        <div class="project">
+            <h3>Fancy LoginPage</h3>
+            <p>Using Bootstrap | 03/2024 - 04/2024</p>
+            <p>Understanding the concept of HTML's and Bootstrap's working mechanisms together.</p>
+        </div>
+        <div class="project">
+            <h3>Microsoft Word's Ribbon</h3>
+            <p>Exploration of JS jargons | 05/2023 - 07/2023</p>
+            <p>An attempt to replicate Microsoft Word with all functionalities on the web page. And exploring the JS (JavaScript).</p>
+        </div>
+        <div class="project">
+            <h3>Mini Project</h3>
+            <p>Understanding the Hover property | 06/2023 - 06/2023</p>
+            <p>To understand the concept of the Hover property of CSS.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p><a href="mailto:mdammal7862+resume@gmail.com"><i class='far fa-envelope' style='font-size:48px;color:red'></i><br>Email:</a></p>
+        <p>Phone: <a href='tel:+919910875127'>
+<i class="fa fa-mobile-phone" style="font-size:48px;color:black"></i></a>, 8010202587</p>
+        <p>WhatsApp: <a href="https://wa.me/+919667124661" ><i class='fab fa-whatsapp-square' style='font-size:48px;color:#25D366'></i></a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/md-ammal-32433720a" target="_blank" >www.linkedin.com/in/md-ammal-32433720a</a></p>
+        <p>GitHub: <a href="https://github.com/Md-ammal">https://github.com/Md-ammal</a></p>
+        <p>Address: B-Block Sudarshan Park, Moti Nagar, West Delhi, New Delhi-110015.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Md Ammal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
